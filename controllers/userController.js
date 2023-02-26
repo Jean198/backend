@@ -92,7 +92,7 @@ const loginUser = asyncHandler(async (req, res) => {
     res.cookie('token', token, {
       httpOnly: false,
       expires: new Date(Date.now() + 1000 * 86400),
-      //sameSite: 'none', // disabling this helped to get the cookie in the browser
+      sameSite: 'none', // disabling this helped to get the cookie in the browser
       secure: false,
     });
     const { _id, name, email, photo, phone, bio } = user;
@@ -118,7 +118,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   res.cookie('token', '', {
     httpOnly: true,
     expires: new Date(0),
-    // sameSite: 'none', Disabling this helps to delete the cookie from the browser;
+    sameSite: 'none',
   });
 
   res.status(200).json({ message: 'User logout succesfully!' });
