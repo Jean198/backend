@@ -93,9 +93,8 @@ const loginUser = asyncHandler(async (req, res) => {
       path: '/',
       httpOnly: true,
       expires: new Date(Date.now() + 1000 * 86400),
-      //sameSite: 'Lax', // disabling this helped to get the cookie in the browser
-      //secure: true,
-      Domain: 'onrender.com',
+      sameSite: 'none', // disabling this helped to get the cookie in the browser
+      secure: true,
     });
     const { _id, name, email, photo, phone, bio } = user;
     res.status(200).json({
