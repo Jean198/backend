@@ -120,7 +120,7 @@ const logoutUser = asyncHandler(async (req, res) => {
     path: '/',
     httpOnly: true,
     expires: new Date(0),
-    //sameSite: 'none',
+    sameSite: 'none',
     secure: true,
   });
 
