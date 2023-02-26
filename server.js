@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://wms-app.vercel.app'],
+    origin: ['http://localhost:3000', 'https://wms-app-coral.vercel.app'],
     credentials: true,
   })
 );
