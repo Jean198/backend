@@ -90,7 +90,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     //Send Http-only cookie
     res.cookie('token', token, {
-      path: '/',
+      //path: '/',
       httpOnly: true,
       expires: new Date(Date.now() + 1000 * 86400),
       //sameSite: 'strict', // disabling this helped to get the cookie in the browser
