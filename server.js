@@ -7,7 +7,7 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const userRoute = require('./routes/userRoute');
 const productRoute = require('./routes/productRoute');
-const errorHandler = require('../backend/middlewares/errorMiddleware');
+const errorHandler = require('./middlewares/errorMiddleware');
 mongoose.set('strictQuery', true);
 const cookieParser = require('cookie-parser');
 const path = require('path');
