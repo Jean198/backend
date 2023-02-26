@@ -94,7 +94,7 @@ const loginUser = asyncHandler(async (req, res) => {
       httpOnly: true,
       expires: new Date(Date.now() + 1000 * 86400),
       //sameSite: 'strict', // disabling this helped to get the cookie in the browser
-      secure: true,
+      //secure: true,
     });
     const { _id, name, email, photo, phone, bio } = user;
     res.status(200).json({
